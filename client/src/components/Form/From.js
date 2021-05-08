@@ -18,6 +18,10 @@ const Form = ({ currentId, setCurrentId }) => {
 		if (post) setPostData(post);
 	}, [post]);
 	
+    const clear = () => {
+		setCurrentId(0);
+		setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
+	};
 
 	return (
 		<Paper className={classes.paper}>
